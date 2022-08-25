@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: dbt_soruce
+    database: TRAINING_LAB
+    schema: PUBLIC
+    tables:
+      - name: INSURANCE_TBL
+     

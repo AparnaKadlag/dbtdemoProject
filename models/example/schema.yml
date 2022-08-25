@@ -2,14 +2,21 @@
 version: 2
 
 models:
-    - name: my_first_dbt_model
+    - name: dbttest
       description: "A starter dbt model"
       columns:
-          - name: id
+          - name: AGENT_ID
             description: "The primary key for this table"
             tests:
                 - unique
                 - not_null
+          - name: MARITAL_STATUS
+            tests:
+              - accepted_values:
+                  values:
+                    - Y
+                    - N
+                  
 
     - name: my_second_dbt_model
       description: "A starter dbt model"
